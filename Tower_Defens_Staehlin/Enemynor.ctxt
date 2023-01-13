@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Enemynor
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Enemynor\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=speed\ turn
+comment1.target=void\ Enemynor(int,\ int)
+comment10.params=angle\ distance
+comment10.target=Point\ pointPosition(int,\ int)
+comment2.params=
+comment2.target=Enemynor()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=hit
+comment4.target=void\ removeLife(int)
+comment5.params=
+comment5.target=greenfoot.Color\ leftCol()
+comment6.params=
+comment6.target=greenfoot.Color\ rightCol()
+comment7.params=col
+comment7.target=boolean\ isPath(greenfoot.Color)
+comment8.params=
+comment8.target=Point\ leftPoint()
+comment9.params=
+comment9.target=Point\ rightPoint()
+comment9.text=\r\n\ Liefert\ die\ Position\ des\ rechten\ Auges.\r\n
+numComments=11
