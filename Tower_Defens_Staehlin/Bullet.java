@@ -9,20 +9,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bullet extends Actor
 {
     public int dmg;
-    private int speed;
+    private int speed = 8;
+    
+    private int maxrange;
     
     private boolean auto;
     private Enemys target;
     
     
-    public Bullet()
+    public Bullet(int dmgtemp, int rangetemp, int rotation)
     {
+        auto = false;
+        dmg = dmgtemp;
         
+        maxrange = rangetemp;
+        
+        this.setRotation(rotation);
     }
+    
     public Bullet(int dmgtemp, Enemys targettemp)
     {
         dmg = dmgtemp;
-        speed = 8;
         auto = true;
         target = targettemp;
     }
@@ -40,7 +47,34 @@ public class Bullet extends Actor
                 getWorld().removeObject(this);
             } else {
                 moveauto();
+                touchEnemy();
             }
+        } else
+        {
+            movemanuell();
+            if(this.isAtEdge() || maxrange <= 0)
+            {
+                getWorld().removeObject(this);
+            } else {
+                touchEnemy();
+            }
+        }
+    }
+    
+    private void movemanuell()
+    {
+        this.move(speed);
+        maxrange -= speed;
+    }
+    
+    private void touchEnemy()
+    {
+        Enemys enemy = (Enemys)getOneIntersectingObject(Enemys.class);
+        
+        if(enemy != null)
+        {
+            enemy.removeLife(dmg);
+            getWorld().removeObject(this);
         }
     }
     

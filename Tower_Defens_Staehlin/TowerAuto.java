@@ -8,11 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TowerAuto extends Towers
 {
-    public int range = 150;
-    public int dmg = 5;
-    public int shootingspeed = 20;
     private int shootdelay = 0;
-    
     
     private Range personalRange = null;
     private boolean mouseOver = false;
@@ -21,7 +17,13 @@ public class TowerAuto extends Towers
     
     public TowerAuto()
     {
-        
+        range = 150;
+        dmg = 5;
+        shootingspeed = 40;
+       
+        GreenfootImage image = new GreenfootImage("TowerAuto.png");
+        image.scale(image.getWidth()/2, image.getHeight()/2);;
+        this.setImage(image);
     }
     
     /**
@@ -32,7 +34,7 @@ public class TowerAuto extends Towers
     {
         hover();
         
-        currenttarget = findEnemy(range);
+        currenttarget = findEnemy();
         
         shootdelay--;
         if(currenttarget != null && shootdelay <= 0)

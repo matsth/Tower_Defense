@@ -10,7 +10,12 @@ import java.util.ArrayList;
  */
 public class Towers extends Actor
 {
-    public Enemys findEnemy(int range)
+    public int range;
+    public int dmg;
+    public int shootingspeed;
+    
+    
+    public Enemys findEnemy()
     {
         List<Enemys> enemy = getObjectsInRange(range, Enemys.class);
         

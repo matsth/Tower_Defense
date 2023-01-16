@@ -11,24 +11,14 @@ public class Enemynor extends Enemys
     private int pointOffset = this.getImage().getWidth()/2;
     private int pointAngle = 20;
     
-    private int damage = 1;
-    private int value = 20;
-    
-    private int turnrate;
-    private int movementspeed;
-    
-    public int health = 10;
-
-    
-    public void Enemynor(int speed, int turn)
-    {
-        turnrate = turn;
-        movementspeed = speed;
-    }
+    private int turnrate = 25;
     
     public Enemynor()
     {
-        Enemynor(3,25);
+        movementspeed = 3;
+        health = 10;
+        damage = 1;
+        value = 10;
     }
     
     public void act()
@@ -43,25 +33,7 @@ public class Enemynor extends Enemys
         }
         move(movementspeed);
         
-        int x = testBullet();
-        if(x>0)
-        {
-            removeLife(x);
-        } else
-        {
-            touchEnd(damage);
-        }
-    }
-    
-    public void removeLife(int hit)
-    {
-        health -= hit;
-        
-        if(health <= 0)
-        {
-            ((GameWorld)getWorld()).monychange += value;
-            getWorld().removeObject(this);
-        }
+        touchEnd();
     }
     
     private Color leftCol()

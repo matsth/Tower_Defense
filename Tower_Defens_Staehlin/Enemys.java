@@ -8,11 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemys extends Actor
 {
-    public void touchEnd(int dmg)
+    public int movementspeed;
+    public int health;
+    
+    public int damage;
+    public int value;
+    
+    public void touchEnd()
     {
         if(this.isTouching(End.class))
         {
-            ((GameWorld)getWorld()).lifechange += -dmg;
+            ((GameWorld)getWorld()).changeLifes(damage);
             
             getWorld().removeObject(this);
         }
@@ -31,5 +37,16 @@ public class Enemys extends Actor
             return x;
         }
         return 0;
+    }
+    
+    public void removeLife(int hit)
+    {
+        health -= hit;
+        
+        if(health <= 0)
+        {
+            ((GameWorld)getWorld()).changeMoney(value);
+            getWorld().removeObject(this);
+        }
     }
 }

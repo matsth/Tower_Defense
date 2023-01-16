@@ -16,9 +16,9 @@ public class ButNextWave extends Button
     }
     public void act()
     {
-        if(Greenfoot.mouseClicked(this))
+        if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("Space"))
         {
-            ((GameWorld)getWorld()).nextwaveok = true;
+            ((GameWorld)getWorld()).nextRound();
         }
     }
 }

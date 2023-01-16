@@ -8,7 +8,49 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Range extends Actor
 {
+    private int range;
+    
     public Range(int size, boolean ok)
+    {
+        range = size;
+        
+        GreenfootImage image = null;
+        
+        if(ok)
+        {
+            
+            image = new GreenfootImage("Rangegood.png");
+            
+        } else {
+            
+            image = new GreenfootImage("Rangebad.png");
+            
+        }
+        
+        image.scale(range*2, range*2);
+        setImage(image);
+    }
+    
+    public Range(int size)
+    {
+        range = size;
+        
+        GreenfootImage image = new GreenfootImage("Rangegood.png");
+        
+        image.scale(range*2, range*2);
+        setImage(image);
+    }
+    
+    public Range()
+    {
+        range = 150;
+        
+        GreenfootImage image = new GreenfootImage("Rangegood.png");
+        image.scale(range*2, range*2);
+        setImage(image);
+    }
+    
+    public void changeColor(boolean ok)
     {
         GreenfootImage image = null;
         
@@ -23,14 +65,7 @@ public class Range extends Actor
             
         }
         
-        image.scale(size*2, size*2);
-        setImage(image);
-    }
-    
-    public Range()
-    {
-        GreenfootImage image = new GreenfootImage("Rangegood.png");
-        image.scale(300, 300);
+        image.scale(range*2, range*2);
         setImage(image);
     }
 }
