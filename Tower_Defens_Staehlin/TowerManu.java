@@ -10,15 +10,14 @@ public class TowerManu extends Towers
 {
     private int shootdelay = 0;
     
-    private Range personalRange = null;
-    private boolean mouseOver = false;
-    
     public TowerManu()
     {
-        range = 600;
-        dmg = 3;
-        shootingspeed = 10;
-       
+        int range = 600;
+        int dmg = 3;
+        int shootingspeed = 10;
+        
+        setup(new int[]{range, dmg, shootingspeed});
+        
         GreenfootImage image = new GreenfootImage("TowerManu.png");
         image.scale(image.getWidth()/2, image.getHeight()/2);
         this.setImage(image);
@@ -41,8 +40,8 @@ public class TowerManu extends Towers
     
     private void shoot()
     {
-        getWorld().addObject(new Bullet(dmg, range, (this.getRotation()-90)), this.getX(), this.getY());
-        shootdelay = shootingspeed;
+        getWorld().addObject(new Bullet(getDmg(), getRange(), (this.getRotation()-90)), this.getX(), this.getY());
+        shootdelay = getShootspeed();
     }
     
     public void turntomous()
@@ -51,23 +50,6 @@ public class TowerManu extends Towers
         if(mouse!=null){
            this.turnTowards(mouse.getX(), mouse.getY());
            this.turn(90);
-        }
-    }
-    
-        public void hover()
-    {
-        if (!mouseOver && Greenfoot.mouseMoved(this))
-        {
-            personalRange = new Range(range,true);
-            getWorld().addObject(personalRange, this.getX(), this.getY());
-            
-            mouseOver = true;
-        }
-        if (mouseOver && Greenfoot.mouseMoved(null) && ! Greenfoot.mouseMoved(this))
-        {
-            getWorld().removeObject(personalRange);
-            
-            mouseOver = false;
         }
     }
 }

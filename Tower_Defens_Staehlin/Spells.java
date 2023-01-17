@@ -8,10 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Spells extends Text
 {
-    public Range spellrange;
-    public int range;
-    public int price;
-    public boolean rangeadded = false;
+    private Range spellrange;
+    private int range;
+    private int price;
+    private boolean rangeadded = false;
     
     public void followMous()
     {
@@ -33,6 +33,31 @@ public class Spells extends Text
             getWorld().addObject(spellrange, this.getX(), this.getY());
             rangeadded = true;
         }
+    }
+    
+    public void setprice(int value)
+    {
+        price = value;
+    }
+    
+    public int getprice()
+    {
+        return price;
+    }
+    
+    public Range returnRangeobj()
+    {
+        return spellrange;
+    }
+    
+    public void setRange(int radius)
+    {
+        range = radius;
+    }
+    
+    public int returnRange()
+    {
+        return range;
     }
     
     public void stop()

@@ -13,8 +13,8 @@ public class Boom extends Spells
     
     public Boom(int tempprice, int tempsize)
     {
-        range = tempsize;
-        price = tempprice;
+        setRange(tempsize);
+        setprice(tempprice);
         
         this.setText("BOOM!");
     }
@@ -32,10 +32,10 @@ public class Boom extends Spells
     
     public void buythis()
     {
-        if(Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(spellrange))
+        if(Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(returnRangeobj()))
         {
-            ((GameWorld)getWorld()).changeMoney(-price);
-            List<Enemys> targets = getObjectsInRange(range, Enemys.class);
+            ((GameWorld)getWorld()).changeMoney(-getprice());
+            List<Enemys> targets = getObjectsInRange(returnRange(), Enemys.class);
             
             if(!targets.isEmpty())
             {

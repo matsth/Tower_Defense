@@ -8,11 +8,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemys extends Actor
 {
-    public int movementspeed;
-    public int health;
+    private int movementspeed;
+    private int health;
     
-    public int damage;
-    public int value;
+    private int damage;
+    private int value;
+    
+    public void setStats(int[] stats)
+    {
+        movementspeed = stats[0];
+        health = stats[1];
+        
+        damage = stats[2];
+        value = stats[3];
+    }
+    
+    public int getmove()
+    {
+        return movementspeed;
+    }
     
     public void touchEnd()
     {
@@ -22,21 +36,6 @@ public class Enemys extends Actor
             
             getWorld().removeObject(this);
         }
-    }
-    
-    public int testBullet()
-    {
-        Bullet bul = (Bullet)getOneIntersectingObject(Bullet.class);
-        
-        if(bul != null)
-        {
-            int x = bul.dmg;
-            
-            getWorld().removeObject(bul);
-            
-            return x;
-        }
-        return 0;
     }
     
     public void removeLife(int hit)

@@ -9,23 +9,23 @@ import java.util.*;
  */
 public class GameWorld extends World
 {
-    public int cash;
-    public int lifes;
+    private int cash = 0;
+    private int lifes = 0;
     
-    public int Level;
+    private int Level;
     
-    public Point spawnpoint;
+    private Point spawnpoint;
     
-    public int timer = 0;
+    private int timer = 0;
     private int ticker = 0; //60 ticks sind eine Sekunde
     
-    public int[] spawnPerWave;
-    public int[] spawnoffset;
+    private int[] spawnPerWave;
+    private int[] spawnoffset;
     
     
-    public int spawncounter = 0;
-    public int currentWave = 0;
-    public int currentspawend;
+    private int spawncounter = 0;
+    private int currentWave = 0;
+    private int currentspawend;
     
     /**
      * Constructor for objects of class GameWorld.
@@ -98,7 +98,7 @@ public class GameWorld extends World
     /**
      * 
      */
-    public void gameOver()
+    private void gameOver()
     {
         EndScreen newWorld = new EndScreen(false, Level);
         Greenfoot.setWorld(newWorld);
@@ -118,6 +118,19 @@ public class GameWorld extends World
     {
         Attributes attribute = this.getObjects(Attributes.class).get(1);
         attribute.setText("Money: " + cash + "$");
+    }
+    
+    public void setupLevel(int[] enemysperwave, int[] cooldownperwave, Point tempspawn, int LVL)
+    {
+        spawnPerWave = enemysperwave;
+        spawnoffset = cooldownperwave;
+        
+        currentspawend = spawnPerWave[currentWave];
+        
+        spawnpoint = tempspawn;
+        Level = LVL;
+        
+        showRound();
     }
     
     private void spawner()
@@ -162,7 +175,7 @@ public class GameWorld extends World
     /**
      * 
      */
-    public void gameOn()
+    private void gameOn()
     {
         EndScreen newWorld = new EndScreen(true, Level);
         Greenfoot.setWorld(newWorld);
@@ -174,5 +187,10 @@ public class GameWorld extends World
     {
         Attributes attribute = this.getObjects(Attributes.class).get(3);
         attribute.setText("Wave " + currentWave + " / " + (spawnPerWave.length - 1));
+    }
+    
+    public int Money()
+    {
+        return cash;
     }
 }

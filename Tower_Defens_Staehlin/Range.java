@@ -14,40 +14,21 @@ public class Range extends Actor
     {
         range = size;
         
-        GreenfootImage image = null;
-        
-        if(ok)
-        {
-            
-            image = new GreenfootImage("Rangegood.png");
-            
-        } else {
-            
-            image = new GreenfootImage("Rangebad.png");
-            
-        }
-        
-        image.scale(range*2, range*2);
-        setImage(image);
+        changeColor(ok);
     }
     
     public Range(int size)
     {
         range = size;
         
-        GreenfootImage image = new GreenfootImage("Rangegood.png");
-        
-        image.scale(range*2, range*2);
-        setImage(image);
+        changeColor(true);
     }
     
     public Range()
     {
         range = 150;
         
-        GreenfootImage image = new GreenfootImage("Rangegood.png");
-        image.scale(range*2, range*2);
-        setImage(image);
+        changeColor(true);
     }
     
     public void changeColor(boolean ok)

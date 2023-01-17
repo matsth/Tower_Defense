@@ -14,10 +14,12 @@ public class Enemydir extends Enemys
     
     public Enemydir()
     {
-        movementspeed = 1;
-        health = 10;
-        damage = 2;
-        value = 20;
+        int movementspeed = 1;
+        int health = 10;
+        int damage = 2;
+        int value = 20;
+        
+        setStats(new int[]{movementspeed, health, damage, value});
     }
     /**
      * Act - do whatever the Enemydir wants to do. This method is called whenever
@@ -30,7 +32,7 @@ public class Enemydir extends Enemys
             setGoeal();
         }
         this.turnTowards(target.getX(), target.getY());
-        this.move(movementspeed);
+        this.move(getmove());
         touchEnd();
     }
     

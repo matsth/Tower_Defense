@@ -8,18 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TempTower extends Actor
 {
-    public int range;
+    private int range;
     
-    public int price;
+    private int price;
     
-    public Towers tower;
+    private Towers tower;
     
-    public Range showrange;
-    public boolean rangeok;
+    private Range showrange;
+    private boolean rangeok;
     
     public TempTower(int tempprice, Towers temptower, String imagetw)
     {
-        range = temptower.range;
+        range = temptower.getRange();
         price = tempprice;
         tower = temptower;
         
@@ -38,7 +38,7 @@ public class TempTower extends Actor
         buy();
     }
     
-    public void rangeandColor()
+    private void rangeandColor()
     {
         if(showrange == null)
         {

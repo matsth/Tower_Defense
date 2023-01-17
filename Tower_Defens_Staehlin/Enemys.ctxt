@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=Enemys
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Enemys\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ touchEnd()
+comment1.params=stats
+comment1.target=void\ setStats(int[])
 comment2.params=
-comment2.target=int\ testBullet()
-comment3.params=hit
-comment3.target=void\ removeLife(int)
-numComments=4
+comment2.target=int\ getmove()
+comment3.params=
+comment3.target=void\ touchEnd()
+comment4.params=hit
+comment4.target=void\ removeLife(int)
+numComments=5

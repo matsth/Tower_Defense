@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EndScreen extends World
 {
-    public boolean win;
-    public int level;
+    private boolean win;
+    private int level;
     
     /**
      * Constructor for objects of class EndScreen.

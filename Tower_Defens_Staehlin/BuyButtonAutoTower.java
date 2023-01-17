@@ -14,7 +14,7 @@ public class BuyButtonAutoTower extends Button
         GreenfootImage image = new GreenfootImage("buttonAutoTower.png");
         image.scale(image.getWidth()/2, image.getHeight()/2);;
         this.setImage(image);
-        price = 200;
+        setprice(200);
     }
     
     /**
@@ -26,7 +26,7 @@ public class BuyButtonAutoTower extends Button
         cklicked();
     }
     
-    public void cklicked()
+    private void cklicked()
     {
         if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("1"))
         {
@@ -37,11 +37,11 @@ public class BuyButtonAutoTower extends Button
         }
     }
     
-    public void addTower()
+    private void addTower()
     {
           Towers towertemp = new TowerAuto();
           
-          TempTower newtemp = new TempTower(price, towertemp, "TowerAuto");
+          TempTower newtemp = new TempTower(getprice(), towertemp, "TowerAuto");
           getWorld().addObject(newtemp, this.getX(), this.getY());
     }
 }

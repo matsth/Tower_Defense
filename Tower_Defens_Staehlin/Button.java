@@ -9,19 +9,27 @@ import java.util.*;
  */
 public class Button extends Actor
 {
-    public int price;
-    public Towers tower;
-    public String towername;
+    private int price;
     
     public boolean buyok()
     {
-        if(((GameWorld)getWorld()).cash >= price)
+        if(((GameWorld)getWorld()).Money() >= price)
         {
             removetemps();
             return true;
         } else {
             return false;
         }
+    }
+    
+    public void setprice(int cost)
+    {
+        price = cost;
+    }
+    
+    public int getprice()
+    {
+        return price;
     }
     
     public void removetemps()

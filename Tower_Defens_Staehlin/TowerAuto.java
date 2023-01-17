@@ -10,17 +10,16 @@ public class TowerAuto extends Towers
 {
     private int shootdelay = 0;
     
-    private Range personalRange = null;
-    private boolean mouseOver = false;
-    
     private Enemys currenttarget = null;
     
     public TowerAuto()
     {
-        range = 150;
-        dmg = 5;
-        shootingspeed = 40;
-       
+        int range = 150;
+        int dmg = 5;
+        int shootingspeed = 40;
+        
+        setup(new int[]{range, dmg, shootingspeed});
+        
         GreenfootImage image = new GreenfootImage("TowerAuto.png");
         image.scale(image.getWidth()/2, image.getHeight()/2);;
         this.setImage(image);
@@ -43,29 +42,12 @@ public class TowerAuto extends Towers
         }
     }
     
-    public void shoot()
+    private void shoot()
     {
         this.turnTowards(currenttarget.getX(), currenttarget.getY());
         this.turn(90);
         
-        getWorld().addObject(new Bullet(dmg, currenttarget), this.getX(), this.getY());
-        shootdelay = shootingspeed;
-    }
-    
-    public void hover()
-    {
-        if (!mouseOver && Greenfoot.mouseMoved(this))
-        {
-            personalRange = new Range(range,true);
-            getWorld().addObject(personalRange, this.getX(), this.getY());
-            
-            mouseOver = true;
-        }
-        if (mouseOver && Greenfoot.mouseMoved(null) && ! Greenfoot.mouseMoved(this))
-        {
-            getWorld().removeObject(personalRange);
-            
-            mouseOver = false;
-        }
+        getWorld().addObject(new Bullet(getDmg(), currenttarget), this.getX(), this.getY());
+        shootdelay = getShootspeed();
     }
 }

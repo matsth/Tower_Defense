@@ -14,8 +14,7 @@ public class BuyButtonManuelTower extends Button
         GreenfootImage image = new GreenfootImage("buttonManuelTower.png");
         image.scale(image.getWidth()/2, image.getHeight()/2);;
         this.setImage(image);
-        price = 300;
-        towername = "TowerManu";
+        setprice(300);
     }
     
     /**
@@ -27,7 +26,7 @@ public class BuyButtonManuelTower extends Button
         cklicked();
     }
     
-    public void cklicked()
+    private void cklicked()
     {
         if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("2"))
         {
@@ -38,11 +37,11 @@ public class BuyButtonManuelTower extends Button
         }
     }
     
-    public void addTower()
+    private void addTower()
     {
           Towers towertemp = new TowerManu();
           
-          TempTower newtemp = new TempTower(price, towertemp, "TowerManu");
+          TempTower newtemp = new TempTower(getprice(), towertemp, "TowerManu");
           getWorld().addObject(newtemp, this.getX(), this.getY());
     }
 }

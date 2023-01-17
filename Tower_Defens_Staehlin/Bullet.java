@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bullet extends Actor
 {
-    public int dmg;
+    private int dmg;
     private int speed = 8;
     
     private int maxrange;

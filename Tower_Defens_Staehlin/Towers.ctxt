@@ -1,6 +1,16 @@
 #BlueJ class context
 comment0.target=Towers
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Towers\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Enemys\ findEnemy()
-numComments=2
+comment1.params=stats
+comment1.target=void\ setup(int[])
+comment2.params=
+comment2.target=int\ getRange()
+comment3.params=
+comment3.target=int\ getDmg()
+comment4.params=
+comment4.target=int\ getShootspeed()
+comment5.params=
+comment5.target=Enemys\ findEnemy()
+comment6.params=
+comment6.target=void\ hover()
+numComments=7

@@ -10,10 +10,34 @@ import java.util.ArrayList;
  */
 public class Towers extends Actor
 {
-    public int range;
-    public int dmg;
-    public int shootingspeed;
+    private int range;
+    private int dmg;
+    private int shootingspeed;
     
+    private Range personalRange = null;
+    private boolean mouseOver = false;
+    
+    public void setup(int[] stats)
+    {
+        range = stats[0];
+        dmg = stats[1];
+        shootingspeed = stats[2];
+    }
+    
+    public int getRange()
+    {
+        return range;
+    }
+    
+    public int getDmg()
+    {
+        return dmg;
+    }
+    
+    public int getShootspeed()
+    {
+        return shootingspeed;
+    }
     
     public Enemys findEnemy()
     {
@@ -25,6 +49,23 @@ public class Towers extends Actor
         } else
         {
             return (enemy.get(0));
+        }
+    }
+    
+    public void hover()
+    {
+        if (!mouseOver && Greenfoot.mouseMoved(this))
+        {
+            personalRange = new Range(getRange(),true);
+            getWorld().addObject(personalRange, this.getX(), this.getY());
+            
+            mouseOver = true;
+        }
+        if (mouseOver && Greenfoot.mouseMoved(null) && ! Greenfoot.mouseMoved(this))
+        {
+            getWorld().removeObject(personalRange);
+            
+            mouseOver = false;
         }
     }
 }

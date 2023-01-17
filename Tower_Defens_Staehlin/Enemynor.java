@@ -15,10 +15,12 @@ public class Enemynor extends Enemys
     
     public Enemynor()
     {
-        movementspeed = 3;
-        health = 10;
-        damage = 1;
-        value = 10;
+        int movementspeed = 3;
+        int health = 10;
+        int damage = 1;
+        int value = 10;
+        
+        setStats(new int[]{movementspeed, health, damage, value});
     }
     
     public void act()
@@ -31,7 +33,7 @@ public class Enemynor extends Enemys
         {
             turn(-turnrate);
         }
-        move(movementspeed);
+        move(getmove());
         
         touchEnd();
     }
