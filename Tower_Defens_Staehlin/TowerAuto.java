@@ -12,6 +12,9 @@ public class TowerAuto extends Towers
     
     private Enemys currenttarget = null;
     
+    /**
+     * Setzt die Stats des Towers und Passt die grösse des Objects an.
+     */
     public TowerAuto()
     {
         int range = 150;
@@ -28,20 +31,32 @@ public class TowerAuto extends Towers
     /**
      * Act - do whatever the TowerAuto wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
+     * 
+     * Zuerst wird getestet ob über den Tower gehoverd wird.
+     * Danach wird der shotdelay Reduziert.
+     * Falls dieser unter oder gleich 0 ist wird ein neues Ziel gesucht.
+     * Falls ein Ziel gefunden wurde wird darauf geschossen.
      */
     public void act()
     {
         hover();
         
-        currenttarget = findEnemy();
-        
         shootdelay--;
-        if(currenttarget != null && shootdelay <= 0)
+        if(shootdelay <= 0)
         {
-            shoot();
+            currenttarget = findEnemy();
+            if(currenttarget != null)
+            {
+                shoot();
+            }
         }
     }
-    
+    /**
+     * Richte sich zum Gegner + 90 Grad.
+     * 
+     * Erzeugt eine neue Bullet mit dem Ziel als target.
+     * Setze den shootdelay.
+     */
     private void shoot()
     {
         this.turnTowards(currenttarget.getX(), currenttarget.getY());

@@ -10,6 +10,9 @@ public class Range extends Actor
 {
     private int range;
     
+    /**
+     * Erzeuge einen bestimte Range mit mitgegeben Radius mit einer Bestimmten Farbe.
+     */
     public Range(int size, boolean ok)
     {
         range = size;
@@ -17,6 +20,9 @@ public class Range extends Actor
         changeColor(ok);
     }
     
+    /**
+     * Ein grüne Range wird mit einem variablen Radius wird erstellt.
+     */
     public Range(int size)
     {
         range = size;
@@ -24,6 +30,9 @@ public class Range extends Actor
         changeColor(true);
     }
     
+    /**
+     * Einen grüner Range mit einem Radius von 150 wird erstellt.
+     */
     public Range()
     {
         range = 150;
@@ -31,6 +40,11 @@ public class Range extends Actor
         changeColor(true);
     }
     
+    /**
+     * Die Farbe des Radius kann auf rot oder grün geändert werden.
+     * true ist grün
+     * fals ist rot
+     */
     public void changeColor(boolean ok)
     {
         GreenfootImage image = null;

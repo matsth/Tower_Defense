@@ -13,6 +13,9 @@ public class Spells extends Text
     private int price;
     private boolean rangeadded = false;
     
+    /**
+     * Der Spell mit der entsprechenden Range (fals vorhanden) folgt der Maus.
+     */
     public void followMous()
     {
         MouseInfo mouse = Greenfoot.getMouseInfo();
@@ -24,7 +27,9 @@ public class Spells extends Text
            }
         }
     }
-    
+    /**
+     * Falls noch keine Range hinzugefügt wurde wird eine neue Erstellt.
+     */
     public void addspellrange()
     {
         if(!rangeadded)
@@ -34,32 +39,44 @@ public class Spells extends Text
             rangeadded = true;
         }
     }
-    
+    /**
+     * Der Price des Spells wird gesetzt.
+     */
     public void setprice(int value)
     {
         price = value;
     }
-    
+    /**
+     * Der Price des Spells wird herausgegeben.
+     */
     public int getprice()
     {
         return price;
     }
-    
+    /**
+     * Das Range Object des Spells wird zurückgegeben.
+     */
     public Range returnRangeobj()
     {
         return spellrange;
     }
-    
+    /**
+     * Die Reichweite des Spells wird gesetzt.
+     */
     public void setRange(int radius)
     {
         range = radius;
     }
-    
+    /**
+     * Die Reichweite des Spells wird zurückgegeben.
+     */
     public int returnRange()
     {
         return range;
     }
-    
+    /**
+     * Der Spell wird entfernt mit removethis() Methode falls esc gedrückt wird.
+     */
     public void stop()
     {
         if(Greenfoot.isKeyDown("escape"))
@@ -67,7 +84,9 @@ public class Spells extends Text
             removethis();
         }
     }
-    
+    /**
+     * Entfernt die Range und das Spell Object aus der Welt.
+     */
     public void removethis()
     {
             if(spellrange != null)

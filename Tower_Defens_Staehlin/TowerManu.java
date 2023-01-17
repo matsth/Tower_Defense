@@ -10,6 +10,9 @@ public class TowerManu extends Towers
 {
     private int shootdelay = 0;
     
+    /**
+     * Setzt die Stats des Towers und Passt die grösse des Objects an.
+     */
     public TowerManu()
     {
         int range = 600;
@@ -25,6 +28,12 @@ public class TowerManu extends Towers
     /**
      * Act - do whatever the TowerManu wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
+     * 
+     * Zuerst dreht sich der Turm zur Maus.
+     * Danach wird getestet ob über den Tower gehoved wird.
+     * Danach wird der shotdelay Reduziert.
+     * 
+     * Falls der shootdelay unter gleich 0 ist wird geschossen.
      */
     public void act()
     {
@@ -38,12 +47,19 @@ public class TowerManu extends Towers
         }
     }
     
+    /**
+     * Eine neue Manuelle Bullet wird erzeugt mit der ausrichtung dieses Towers.
+     * Danach wird der shootdelay neu gesetzt.
+     */
     private void shoot()
     {
         getWorld().addObject(new Bullet(getDmg(), getRange(), (this.getRotation()-90)), this.getX(), this.getY());
         shootdelay = getShootspeed();
     }
-    
+    /**
+     * Falls die Maus in der Welt ist dreht sich der Turm zur Maus.
+     * Er dreht sich nochmals 90 Grad damit das Bild richtig ausieht.
+     */
     public void turntomous()
     {
         MouseInfo mouse = Greenfoot.getMouseInfo();

@@ -11,7 +11,7 @@ public class LVL1 extends GameWorld
 {
     /**
      * Constructor for objects of class LVL1.
-     *
+     * Setzt das Level auf.
      */
     public LVL1()
     {
@@ -20,7 +20,12 @@ public class LVL1 extends GameWorld
     }
     
     /**
-     * Bereitet das Level vor.
+     * Ein Spawner wird erzeugt (nur um visuel zu schauen wo der Spawnpoint ist) ind diese Kordinaten werden dem Point gegeben.
+     * Es werden die Grössen der Gegnerwellen und die Spawntime dieser bestimmt.
+     * Danach werden die Spielartribute in die GameWorld geschrieben.
+     * 
+     * Das Ende wird plaziert und der NextWave Button
+     * Danach wird der Shop erzeugt.
      */
     private void prepare()
     {
@@ -33,10 +38,7 @@ public class LVL1 extends GameWorld
         int[] EnemyperWave = new int[]{0, 6, 12, 20, 25, 38, 49};
         int[] tempspawnoffset = new int[]{0, 40, 20, 30, 25, 18, 8};        
         
-        this.addObject(new Attributes("Time: 0"), getWidth() - getWidth()/15, getHeight()/20);
-        this.addObject(new Attributes(""), getWidth() - getWidth()/15, getHeight()/14);
-        this.addObject(new Attributes(""), getWidth() - getWidth()/15, getHeight()/11);
-        this.addObject(new Attributes(""), getWidth() - getWidth()/15, getHeight()/9);
+        setupAttributes();
         
         changeMoney(400);
         changeLifes(-5);
@@ -49,6 +51,25 @@ public class LVL1 extends GameWorld
         ButNextWave butNextWave = new ButNextWave();
         this.addObject(butNextWave,getWidth() - getWidth()/15, getHeight()/5);
         
+        setupShop();
+    }
+    
+    /**
+     * Die Attribute werden erzeugt damit auf diese von der GameWorld zugegrifen werden kann.
+     */
+    private void setupAttributes()
+    {
+        this.addObject(new Attributes("Time: 0"), getWidth() - getWidth()/15, getHeight()/20);
+        this.addObject(new Attributes(""), getWidth() - getWidth()/15, getHeight()/14);
+        this.addObject(new Attributes(""), getWidth() - getWidth()/15, getHeight()/11);
+        this.addObject(new Attributes(""), getWidth() - getWidth()/15, getHeight()/9);
+    }
+    
+    /**
+     * Die Shopbuttons werden eingerichtet mit entsprechenden Preisschielder darunter.
+     */
+    private void setupShop()
+    {
         //Shop
         BuyButtonAutoTower towerbutton = new BuyButtonAutoTower();
         this.addObject(towerbutton,0 + getWidth()/15, getHeight()/10);

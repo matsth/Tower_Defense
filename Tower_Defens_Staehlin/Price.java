@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Price extends Text
 {
     /**
-     * 
+     * Der dem Constructor mitgegebene Text wird angezeigt.
      */
     public Price(String text)
     {

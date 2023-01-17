@@ -10,6 +10,9 @@ public class BuyBoom extends Button
 {
     private int size = 100;
     
+    /**
+     * Im Constructor wird die Grösse des Buttons angepasst und der Preis gesetzt.
+     */
     public BuyBoom()
     {
         GreenfootImage image = new GreenfootImage("buttonBuyBoom.png");
@@ -20,12 +23,17 @@ public class BuyBoom extends Button
     /**
      * Act - do whatever the BuyBoom wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
+     * 
+     * Testet ob der Button aktiviert wurde.
      */
     public void act()
     {
         cklicked();
     }
-    
+    /**
+     * Testet ob der Button Angeklickt wurde oder der Shortcut verwendet wurde.
+     * Danach wird ein neuer Spell Boom erzeugt.
+     */
     public void cklicked()
     {
         if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("3"))

@@ -14,6 +14,9 @@ public class Enemys extends Actor
     private int damage;
     private int value;
     
+    /**
+     * Setzt die Stats von einem Enemy.
+     */
     public void setStats(int[] stats)
     {
         movementspeed = stats[0];
@@ -23,11 +26,19 @@ public class Enemys extends Actor
         value = stats[3];
     }
     
+    /**
+     * Gibt zurück wie schnell ein Gegner ist.
+     */
     public int getmove()
     {
         return movementspeed;
     }
     
+    /**
+     * Test ob das Ende ereicht wurden.
+     * Falls ja werden Leben abgezogen mit der changeLifes() Methode der Welt.
+     * Danach wird der Enemy entfernt.
+     */
     public void touchEnd()
     {
         if(this.isTouching(End.class))
@@ -37,7 +48,10 @@ public class Enemys extends Actor
             getWorld().removeObject(this);
         }
     }
-    
+    /**
+     * Wird verwendet um das Leben eines Enemy abzuziehen.
+     * Falls das Leben 0 erreicht wird der Enemy zerstört und gibt sein value als Geld mit der changeMoney() Methode der Welt.
+     */
     public void removeLife(int hit)
     {
         health -= hit;

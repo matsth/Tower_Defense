@@ -16,7 +16,10 @@ public class Bullet extends Actor
     private boolean auto;
     private Enemys target;
     
-    
+    /**
+     * Constructor für eine Bullet die in eine Bestimmte richtung fliegt.
+     * Die Richtung wird mit der Rotation bestimmt.
+     */
     public Bullet(int dmgtemp, int rangetemp, int rotation)
     {
         auto = false;
@@ -27,6 +30,9 @@ public class Bullet extends Actor
         this.setRotation(rotation);
     }
     
+    /**
+     * Constructor für Bullet die dem target nachfliegt das dem Constructor gegeben wurde.
+     */
     public Bullet(int dmgtemp, Enemys targettemp)
     {
         dmg = dmgtemp;
@@ -37,6 +43,13 @@ public class Bullet extends Actor
     /**
      * Act - do whatever the Bullet wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
+     * 
+     * Fals die Bullet Automatisch ist wird dementsprechend geschaut ob es diesen Enemy noch gibt sonst wird Bullet entfernt.
+     * Falls das Target noch existiert wird die Automatische Bewegung durchgeführt und getestet ob ein Enemy berürt wird.
+     * 
+     * Falls die Bullet Manuel ist fliegt sie weiter.
+     * Danach wird getestet ob sie am ende der Welt ist oder ob sie bereits über ihre Maximalreichweite geflogen ist.
+     * Falls ja wird sie entfernt falls nicht wird getestet ob sie ein Gegner berührt.
      */
     public void act()
     {
@@ -61,12 +74,17 @@ public class Bullet extends Actor
         }
     }
     
+    /**
+     * Bewegt sich weiter entsprechend zu ihrer Geschwindigkeit und zieht das von ihrer maxrange ab.
+     */
     private void movemanuell()
     {
         this.move(speed);
         maxrange -= speed;
     }
-    
+    /**
+     * Falls die Bullet einen Enemy berührt wird die removeLife() Methode dieses Enemys getrigert und die Bullet gelöscht.
+     */
     private void touchEnemy()
     {
         Enemys enemy = (Enemys)getOneIntersectingObject(Enemys.class);
@@ -77,7 +95,12 @@ public class Bullet extends Actor
             getWorld().removeObject(this);
         }
     }
-    
+    /**
+     * Dieser Mit der Automatischen Bewegung wird ausgerechnet um wie viel sich die Bullet auf jeder achse bewegen muss.
+     * Danach wird getestet ob sie sich weiter bewegt als die Geschwindigkeit der Bullet falls ja wird diese auf die Geschwindikeit heruntergesetzt.
+     * 
+     * Danach setzt sich die Bullet an den neuen Ort.
+     */
     private void moveauto()
     {
         int X = this.getX() - target.getX();

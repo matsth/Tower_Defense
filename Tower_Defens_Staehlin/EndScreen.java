@@ -12,8 +12,8 @@ public class EndScreen extends World
     private int level;
     
     /**
-     * Constructor for objects of class EndScreen.
-     * 
+     * Erstellt das das EndScreen object.
+     * Setzt ob gewonnen wude und welches Level gespielt wurde.
      */
     public EndScreen(boolean victory, int templevel)
     {    
@@ -26,7 +26,8 @@ public class EndScreen extends World
         prepare();
     }
     /**
-     * Bereitet das EndScreen vor.
+     * Bereitet den EndScreen vor.
+     * Setze entsprechendes Bild ob gewoonen wurde oder nicht.
      */
     private void prepare()
     {

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class End here.
+ * Wird nur Verwendet um zu Testen ob das Ende berührt wird oder die Kordinaten vom Ende holen.
  * 
  * @author (your name) 
  * @version (a version number or a date)

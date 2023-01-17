@@ -12,6 +12,9 @@ public class Enemydir extends Enemys
     private Point target;
     private boolean goalset = false;
     
+    /**
+     * Setzt die statistik dieses Gegners.
+     */
     public Enemydir()
     {
         int movementspeed = 1;
@@ -24,6 +27,9 @@ public class Enemydir extends Enemys
     /**
      * Act - do whatever the Enemydir wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
+     * 
+     * Falls noch keine Koordinaten des Endes vorhanden sind führe die ssetGoeal() Methode aus.
+     * Danach Bewegt sich dieser Enemy und führt die touchEnd() Methode aus.
      */
     public void act()
     {
@@ -31,11 +37,23 @@ public class Enemydir extends Enemys
         {
             setGoeal();
         }
-        this.turnTowards(target.getX(), target.getY());
-        this.move(getmove());
+        move();
         touchEnd();
     }
     
+    /**
+     * Dreht sich zum gesetzten Goal und bewegt sich dort hin mit seiner Geschwindigkeit.
+     */
+    private void move()
+    {
+        this.turnTowards(target.getX(), target.getY());
+        this.move(getmove());
+    }
+    
+    /**
+     * Holt sich die Kordinaten des Endes.
+     * Erzeugt einen neuen Point mit diesen Kordinaten.
+     */
     private void setGoeal()
     {
         List<End> goal = getWorld().getObjects(End.class);

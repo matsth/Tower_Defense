@@ -29,7 +29,7 @@ public class GameWorld extends World
     
     /**
      * Constructor for objects of class GameWorld.
-     * 
+     * Setzt die richtige Paintorder der Classen damit die wichtigen im Vordergrund sind.
      */
     public GameWorld()
     {    
@@ -38,6 +38,9 @@ public class GameWorld extends World
         setPaintOrder(Button.class, Text.class, TempTower.class, Towers.class, Range.class, Enemynor.class, End.class, Bullet.class);
     }
     
+    /**
+     * Standard act() methode von Greenfoot.
+     */
     public void act()
     {
         ticking();
@@ -46,6 +49,7 @@ public class GameWorld extends World
     
     /**
      * Jede 60zig ticks ist eine Sekunde.
+     * Jede Sekunde wird der Timer hochgezelt und die neue Zeit angezeigt.
      */
     private void ticking()
     {
@@ -55,18 +59,11 @@ public class GameWorld extends World
         {
             ticker = 0;
             timer++;
-            oneSecond();
+            showTime();
         }
     }
     /**
-     * Wird jede Sekunde ausgeführt
-     */
-    private void oneSecond()
-    {
-        showTime();
-    }
-    /**
-     * Ändert die Zeitanzeige auf die aktuellen Leben.
+     * Ändert die Zeitanzeige auf die Spielzeit in Sekunden.
      */
     private void showTime()
     {
@@ -75,7 +72,7 @@ public class GameWorld extends World
     }
     
     /**
-     * Ändert die Leben.
+     * Ändert die Leben und führt die gameOver() methode aus falls 0 Leben ereicht werden.
      */
     public void changeLifes(int value)
     {
@@ -88,7 +85,7 @@ public class GameWorld extends World
         }
     }
     /**
-     * Ändert die Lifeanzeige auf die aktuellen Leben.
+     * Ändert die Lebensanzeige auf die aktuellen Leben.
      */
     private void showLifes()
     {
@@ -96,7 +93,8 @@ public class GameWorld extends World
         attribute.setText("Lifes: " + lifes);
     }
     /**
-     * 
+     * Falls 0 Lebenereicht werden wird auf den EndScreen gewechselt.
+     * mit false wird gesagt dass das Spiel verloren wurde.
      */
     private void gameOver()
     {
@@ -112,14 +110,26 @@ public class GameWorld extends World
         showMoney();
     }
     /**
-     * Ändert die Geldanzeige auf die aktuellen Leben.
+     * Ändert die Geldanzeige auf das aktuele Geld.
      */
     private void showMoney()
     {
         Attributes attribute = this.getObjects(Attributes.class).get(1);
         attribute.setText("Money: " + cash + "$");
     }
+    /**
+     * Gibt das aktuelle Geld aus.
+     */
+    public int money()
+    {
+        return cash;
+    }
     
+    /**
+     * Setup für das Spiel.
+     * Je nach Level können andere Gegner pro Runde geschickt und in verschiedene abstönden.
+     * Zusätzlich wird auch noch der Punkt an dem die Gegner erzeugt werden gesezt und das aktuelle Level.
+     */
     public void setupLevel(int[] enemysperwave, int[] cooldownperwave, Point tempspawn, int LVL)
     {
         spawnPerWave = enemysperwave;
@@ -133,6 +143,10 @@ public class GameWorld extends World
         showRound();
     }
     
+    /**
+     * Der Spawner spawnt alle x ticks einen Enemy.
+     * Hier wird entschieden was für eine Enemy gespawnt wird und auch kontrolliert das die Richtige anzal an gegner erzeugt wird.
+     */
     private void spawner()
     {
         spawncounter++;
@@ -152,7 +166,11 @@ public class GameWorld extends World
             spawncounter = 0;
         }
     }
-    
+    /**
+     * Hier wird die Rundenanzahl erhöht und die anzal der erzeugten Enemys wieder auf die aktuelle anzahl der Runde gesetzt.
+     * Zuerst wird aber kontrolliert das alle Enemys gespawnd wurden und auch keine mehr auf der Map sind.
+     * Falls die Letzte Runde gewonnen wurde wird die gameOn() methode aufgeruft.
+     */
     public void nextRound()
     {
         if(currentspawend <= 0)
@@ -173,7 +191,8 @@ public class GameWorld extends World
         }
     }
     /**
-     * 
+     * Falls die Letzte Runde gewonnen wurde wird auf den EndScreen gewechselt.
+     * Mit true wird gesagt dass das Spiel gewonnen wurde.
      */
     private void gameOn()
     {
@@ -181,16 +200,11 @@ public class GameWorld extends World
         Greenfoot.setWorld(newWorld);
     }
     /**
-     * Ändert die Spielrundenanzeige auf die aktuellen Leben.
+     * Ändert die Spielrundenanzeige auf die aktuellen Runde.
      */
     private void showRound()
     {
         Attributes attribute = this.getObjects(Attributes.class).get(3);
         attribute.setText("Wave " + currentWave + " / " + (spawnPerWave.length - 1));
-    }
-    
-    public int Money()
-    {
-        return cash;
     }
 }

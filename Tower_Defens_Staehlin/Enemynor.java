@@ -13,6 +13,9 @@ public class Enemynor extends Enemys
     
     private int turnrate = 25;
     
+    /**
+     * Setzt die statistik dieses Gegners.
+     */
     public Enemynor()
     {
         int movementspeed = 3;
@@ -23,6 +26,12 @@ public class Enemynor extends Enemys
         setStats(new int[]{movementspeed, health, damage, value});
     }
     
+    /**
+     * Testet ob der Linke Punkt über Schwarz ist und danach ob der Rechte Punkt über Schwarz ist.
+     * Falls Ja dreht sich dieser Enemy entsprechend.
+     * 
+     * Danach bewegt er sich weiter und testet ob er das Ende berührt mit der touchEnd() Methode.
+     */
     public void act()
     {
         if (!isPath(leftCol()))
@@ -38,23 +47,34 @@ public class Enemynor extends Enemys
         touchEnd();
     }
     
+    /**
+     * Der Linke Punkt wird erzeugt und die Farbe des Hintergrunds an diesem Punkt wird geholt.
+     */
     private Color leftCol()
     {
         Point sensorPoint = leftPoint();
         return getWorld().getBackground().getColorAt(sensorPoint.getX(), sensorPoint.getY());
     }
-
+    /**
+     * Der Rechten Punkt wird erzeugt und die Farbe des Hintergrunds an diesem Punkt wird geholt.
+     */
     private Color rightCol()
     {
         Point sensorPoint = rightPoint();
         return getWorld().getBackground().getColorAt(sensorPoint.getX(), sensorPoint.getY());
     }
-    
-    private boolean isPath (Color col)
+    /**
+     * Es wird getestet ob die mitgegebene Farbe Schwarz ist.
+     * Falls ja wird true zurückgegeben sonst false.
+     */
+    private boolean isPath(Color col)
     {
         return col.equals(Color.BLACK);
     }
     
+    /**
+     * Liefert die Position des linken Auges.
+     */
     public Point leftPoint()
     {   
         return pointPosition(-pointAngle, pointOffset);
@@ -67,10 +87,17 @@ public class Enemynor extends Enemys
     {
         return pointPosition(pointAngle, pointOffset);
     }
-
+    
+    
+    /**
+     * Zuerst wird der Winkelbogen zweier Radiuse ausgerechnet.
+     * Danach werden die X und Y Kordinaten des Winkels ausgerechnet.
+     * 
+     * Zum Schluss wird ein neuer Punkt mit den ausgerechneten Kordinaten erstellt und auch ausgegeben.
+     */
     public Point pointPosition(int angle, int distance)
     {
-        double angleRad = Math.toRadians( getRotation() + angle);
+        double angleRad = Math.toRadians(getRotation() + angle);
         int x = (int) Math.round(getX() + Math.cos(angleRad) * distance);
         int y = (int) Math.round(getY() + Math.sin(angleRad) * distance);
         

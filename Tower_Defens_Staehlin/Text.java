@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Text extends Actor
 {
     /**
-     * Dises Object dient dazu Text anzuzeigen.
+     * Dise Methode dient dazu Text anzupssen.
      */
     public void setText(String text)
     {

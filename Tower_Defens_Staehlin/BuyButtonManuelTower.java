@@ -9,6 +9,10 @@ import java.util.*;
  */
 public class BuyButtonManuelTower extends Button
 {
+    /**
+     * Der Constructor von BuyButtonManuelTower erstellt den Button und macht diesen kleiner.
+     * Zusätzlich wird der Preis noch gesetzt.
+     */
     public BuyButtonManuelTower()
     {
         GreenfootImage image = new GreenfootImage("buttonManuelTower.png");
@@ -20,28 +24,25 @@ public class BuyButtonManuelTower extends Button
     /**
      * Act - do whatever the BuyButtonAutoTower wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
+     * 
+     * Testet ob der Button aktiviert wurde.
      */
     public void act()
     {
         cklicked();
     }
-    
+    /**
+     * Testet ob der Button Angeklickt wurde oder der Shortcut verwendet wurde.
+     * Danach wird ein TempTower erstellt vom TowerManu erstellt.
+     */
     private void cklicked()
     {
         if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("2"))
         {
             if(buyok())
             {
-                addTower();
+                addTower(new TowerManu(), "TowerManu");
             }
         }
-    }
-    
-    private void addTower()
-    {
-          Towers towertemp = new TowerManu();
-          
-          TempTower newtemp = new TempTower(getprice(), towertemp, "TowerManu");
-          getWorld().addObject(newtemp, this.getX(), this.getY());
     }
 }

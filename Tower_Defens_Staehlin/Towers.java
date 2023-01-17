@@ -17,28 +17,40 @@ public class Towers extends Actor
     private Range personalRange = null;
     private boolean mouseOver = false;
     
+    /**
+     * Die Stats des Towers werden Gesetzt.
+     */
     public void setup(int[] stats)
     {
         range = stats[0];
         dmg = stats[1];
         shootingspeed = stats[2];
     }
-    
+    /**
+     * Gibt die Range des Towers aus.
+     */
     public int getRange()
     {
         return range;
     }
-    
+    /**
+     * Gibt den Schaden des Towers aus.
+     */
     public int getDmg()
     {
         return dmg;
     }
-    
+    /**
+     * Gibt den Reloadspeed des Towers aus.
+     */
     public int getShootspeed()
     {
         return shootingspeed;
     }
     
+    /**
+     * Findet alle Gegner inerhalb der Reichweite des Towers zurück und holt den ersten raus.
+     */
     public Enemys findEnemy()
     {
         List<Enemys> enemy = getObjectsInRange(range, Enemys.class);
@@ -51,7 +63,10 @@ public class Towers extends Actor
             return (enemy.get(0));
         }
     }
-    
+    /**
+     * Falls über den Tower gehoverd wird erstellt dieser ein neues Range Object mit der Range des Towers.
+     * Falls nichtmer über den Tower gehoverd wird die Range entfernt.
+     */
     public void hover()
     {
         if (!mouseOver && Greenfoot.mouseMoved(this))
