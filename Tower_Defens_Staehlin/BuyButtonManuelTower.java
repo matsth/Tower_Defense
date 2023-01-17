@@ -14,7 +14,7 @@ public class BuyButtonManuelTower extends Button
         GreenfootImage image = new GreenfootImage("buttonManuelTower.png");
         image.scale(image.getWidth()/2, image.getHeight()/2);;
         this.setImage(image);
-        price = 400;
+        price = 300;
         towername = "TowerManu";
     }
     

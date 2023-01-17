@@ -15,7 +15,7 @@ public class BuyBoom extends Button
         GreenfootImage image = new GreenfootImage("buttonBuyBoom.png");
         image.scale(image.getWidth()/2, image.getHeight()/2);;
         this.setImage(image);
-        price = 200;
+        price = 100;
     }
     /**
      * Act - do whatever the BuyBoom wants to do. This method is called whenever

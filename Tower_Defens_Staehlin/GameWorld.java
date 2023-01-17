@@ -117,7 +117,7 @@ public class GameWorld extends World
     private void showMoney()
     {
         Attributes attribute = this.getObjects(Attributes.class).get(1);
-        attribute.setText("Money: " + cash);
+        attribute.setText("Money: " + cash + "$");
     }
     
     private void spawner()

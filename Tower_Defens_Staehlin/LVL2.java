@@ -32,7 +32,7 @@ public class LVL2 extends GameWorld
         currentspawend = spawnPerWave[currentWave];
 
         this.addObject(new Attributes("Time: " + timer), this.getWidth() - this.getWidth()/15, this.getHeight()/20);
-        this.addObject(new Attributes("Money: " + cash), this.getWidth() - this.getWidth()/15, this.getHeight()/14);
+        this.addObject(new Attributes("Money: " + cash + "$"), this.getWidth() - this.getWidth()/15, this.getHeight()/14);
         this.addObject(new Attributes("Lifes: " + lifes), this.getWidth() - this.getWidth()/15, this.getHeight()/11);
         this.addObject(new Attributes("Wave " + (currentWave) + " / " + (spawnPerWave.length - 1)), this.getWidth() - this.getWidth()/15, this.getHeight()/9);
         

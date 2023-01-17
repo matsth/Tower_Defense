@@ -16,7 +16,7 @@ public class TowerManu extends Towers
     public TowerManu()
     {
         range = 600;
-        dmg = 2;
+        dmg = 3;
         shootingspeed = 10;
        
         GreenfootImage image = new GreenfootImage("TowerManu.png");
