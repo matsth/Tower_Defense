@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Range
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Range\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Range\ wird\ ben\u00F6tigt\ um\ die\ Reichweite\ eines\ Towers\ oder\ Spells\ anzuzeigen.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=size\ ok
 comment1.target=Range(int,\ boolean)
 comment1.text=\r\n\ Erzeuge\ einen\ bestimte\ Range\ mit\ mitgegeben\ Radius\ mit\ einer\ Bestimmten\ Farbe.\r\n

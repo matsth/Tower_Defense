@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=GameWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ GameWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Die\ Gameworld\ ist\ die\ Basis\ des\ Spiels.\r\n\ Hier\ werden\ die\ Leben,\ Geld,\ Rundenanzeige\ verwaltet.\r\n\ \r\n\ Zus\u00E4tzlich\ wird\ das\ Spawnen\ der\ gegner\ hier\ abgehalten.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=
 comment1.target=GameWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GameWorld.\r\n\ Setzt\ die\ richtige\ Paintorder\ der\ Classen\ damit\ die\ wichtigen\ im\ Vordergrund\ sind.\r\n

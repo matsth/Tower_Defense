@@ -1,10 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 /**
- * Write a description of class Bullet here.
+ * Die Bullet wird dazu verwendet den Enemys Leben abzuziehen.
+ * Sie hat ein Automatischen und einen Manuellen modi.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Der Manuelle Modi fliegt einfach gerade aus.
+ * 
+ * Der Automatische Modi fliegt einem spezifischen Gegner nach.
+ * Falls dieser nicht mehr existiert sucht sie sich einen anderen Gegnähr in der nähe.
+ * Falls es keinen Hat löscht sie sich selber.
+ * 
+ * Bullets treffen immer den ersten Gegner den sie berühren.
+ * 
+ * @author Matteo
  */
 public class Bullet extends Actor
 {
@@ -14,6 +23,7 @@ public class Bullet extends Actor
     private int maxrange;
     
     private boolean auto;
+    private int retargetrange = 100;
     private Enemys target;
     
     /**
@@ -57,7 +67,13 @@ public class Bullet extends Actor
         {
             if(target.getWorld() == null)
             {
-                getWorld().removeObject(this);
+                if(retarget())
+                {
+                    moveauto();
+                    touchEnemy();
+                } else {
+                    getWorld().removeObject(this);
+                }
             } else {
                 moveauto();
                 touchEnemy();
@@ -134,5 +150,21 @@ public class Bullet extends Actor
         }
         
         this.setLocation(this.getX()-X, this.getY()-Y);
+    }
+    
+    /**
+     * Bullet sucht sich ein neues Target aus falls ein Gegner in der nähe ist.
+     */
+    private boolean retarget()
+    {
+        List<Enemys> enemy = getObjectsInRange(retargetrange, Enemys.class);
+        
+        if(!enemy.isEmpty())
+        {
+            target = enemy.get(0);
+            return true;
+        } else {
+            return false;
+        }
     }
 }

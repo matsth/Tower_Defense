@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemys here.
+ * Verwaltet das Leben und den Schaden/Geld des Enemys falls er das Ziel ereicht oder durch Bullets zerstört wird.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Enemys extends Actor
 {

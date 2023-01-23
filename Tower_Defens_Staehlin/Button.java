@@ -2,10 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
 /**
- * Write a description of class Button here.
+ * Hier werden die Standard funktionen des Buttons verwaltet.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Vom Preis bis zum testen ob er gekauft werden kann ist alles hier verwaltet.
+ * 
+ * @author Matteo
  */
 public class Button extends Actor
 {
@@ -63,5 +64,18 @@ public class Button extends Actor
     {
           TempTower newtemp = new TempTower(price, towertemp, towerdescrip);
           getWorld().addObject(newtemp, this.getX(), this.getY());
+    }
+    
+    /**
+     * Checkt ob der Button oder der Shortcut gedrückt wurde.
+     */
+    public boolean cklickcheck(String shortcut)
+    {
+        if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown(shortcut))
+        {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

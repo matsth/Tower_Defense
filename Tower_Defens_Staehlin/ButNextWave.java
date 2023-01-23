@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ButNextWave here.
+ * Dieser Button versucht die nächste Runde zu startetn.
+ * Diese wird jedoch abgebrochen wenn noch Gegner auf dem Spielfeld sind oder noch nicht gespawnd wurden.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class ButNextWave extends Button
 {
@@ -23,7 +23,7 @@ public class ButNextWave extends Button
      */
     public void act()
     {
-        if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("Space"))
+        if(cklickcheck("Space"))
         {
             ((GameWorld)getWorld()).nextRound();
         }

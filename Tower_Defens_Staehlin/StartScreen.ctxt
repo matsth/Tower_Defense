@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=StartScreen
+comment0.text=\r\n\ Vom\ Startscreen\ aus\ kann\ man\ mit\ 1\ oder\ 2\ ausw\u00E4hlen\ welche\ Runde\ gespielt\ werden\ soll.\r\n\ Zus\u00E4tzlich\ hat\ es\ auf\ dem\ Bild\ noch\ eine\ Spielanleitung.\r\n\ \r\n\ @author\ M\r\n
+comment1.params=
+comment1.target=StartScreen()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ StartScreen.\r\n\ Setzt\ die\ gr\u00F6sse\ des\ Screens.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Testet\ welches\ Level\ gespielt\ werden\ m\u00F6chte.\r\n
+comment3.params=Levelnumber
+comment3.target=void\ setWorld(int)
+comment3.text=\r\n\ Erstelt\ das\ Level\ und\ \u00E4ndert\ auf\ das\ Level.\r\n
+numComments=4

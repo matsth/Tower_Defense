@@ -2,10 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
 /**
- * Write a description of class BuyButtonAutoTower here.
+ * Dieser Button erstellt einen TempTower mit dem AutoTower vormat.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class BuyButtonAutoTower extends Button
 {
@@ -38,7 +37,7 @@ public class BuyButtonAutoTower extends Button
      */
     private void cklicked()
     {
-        if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("1"))
+        if(cklickcheck("1"))
         {
             if(buyok())
             {

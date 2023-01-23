@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BuyButtonAutoTower
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BuyButtonAutoTower\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Dieser\ Button\ erstellt\ einen\ TempTower\ mit\ dem\ AutoTower\ vormat.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=
 comment1.target=BuyButtonAutoTower()
 comment1.text=\r\n\ Der\ Constructor\ von\ BuyButtonAutoTower\ erstellt\ den\ Button\ und\ macht\ diesen\ kleiner.\r\n\ Zus\u00E4tzlich\ wird\ der\ Preis\ noch\ gesetzt.\r\n

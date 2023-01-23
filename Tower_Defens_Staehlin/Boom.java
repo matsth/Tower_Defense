@@ -2,10 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
 /**
- * Write a description of class Boom here.
+ * Bei Boom wird der Spelleffekt eingerichtet der die Gegner in der nähe zerstört.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Boom extends Spells
 {

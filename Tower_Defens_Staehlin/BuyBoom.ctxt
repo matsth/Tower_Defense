@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=BuyBoom
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BuyBoom\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Dieser\ Button\ erstellt\ einen\ Boom\ Spell\ solange\ gen\u00FCgend\ Geld\ vorhanden\ ist.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=
 comment1.target=BuyBoom()
 comment1.text=\r\n\ Im\ Constructor\ wird\ die\ Gr\u00F6sse\ des\ Buttons\ angepasst\ und\ der\ Preis\ gesetzt.\r\n

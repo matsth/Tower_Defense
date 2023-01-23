@@ -1,15 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemynor here.
+ * Normaler Enemy der dem Pfad folgt.
+ * Hier ist die Bewegung geregelt.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Enemynor extends Enemys
 {
     private int pointOffset = this.getImage().getWidth()/2;
     private int pointAngle = 20;
+    private Color Pfadfarbe = Color.BLACK;
     
     private int turnrate = 25;
     
@@ -34,73 +35,43 @@ public class Enemynor extends Enemys
      */
     public void act()
     {
-        if (!isPath(leftCol()))
-        {
-            turn(turnrate);
-        }
-        else if (!isPath(rightCol()))
-        {
-            turn(-turnrate);
-        }
-        move(getmove());
+        needTurn();
+        this.move(getmove());
         
         touchEnd();
     }
     
     /**
-     * Der Linke Punkt wird erzeugt und die Farbe des Hintergrunds an diesem Punkt wird geholt.
+     * Dreht sich fals nötig.
      */
-    private Color leftCol()
+    private void needTurn()
     {
-        Point sensorPoint = leftPoint();
-        return getWorld().getBackground().getColorAt(sensorPoint.getX(), sensorPoint.getY());
-    }
-    /**
-     * Der Rechten Punkt wird erzeugt und die Farbe des Hintergrunds an diesem Punkt wird geholt.
-     */
-    private Color rightCol()
-    {
-        Point sensorPoint = rightPoint();
-        return getWorld().getBackground().getColorAt(sensorPoint.getX(), sensorPoint.getY());
-    }
-    /**
-     * Es wird getestet ob die mitgegebene Farbe Schwarz ist.
-     * Falls ja wird true zurückgegeben sonst false.
-     */
-    private boolean isPath(Color col)
-    {
-        return col.equals(Color.BLACK);
+        if (!pointCollor(-pointAngle).equals(Pfadfarbe))
+        {
+            turn(turnrate);
+        }
+        else if (!pointCollor(pointAngle).equals(Pfadfarbe))
+        {
+            turn(-turnrate);
+        }
     }
     
     /**
-     * Liefert die Position des linken Auges.
-     */
-    public Point leftPoint()
-    {   
-        return pointPosition(-pointAngle, pointOffset);
-    }
-
-    /**
-     * Liefert die Position des rechten Auges.
-     */
-    public Point rightPoint()
-    {
-        return pointPosition(pointAngle, pointOffset);
-    }
-    
-    
-    /**
-     * Zuerst wird der Winkelbogen zweier Radiuse ausgerechnet.
-     * Danach werden die X und Y Kordinaten des Winkels ausgerechnet.
+     * Zuerst wird der Winkelbogen als Radians ausgerechnet.
+     * X: Der Radians wird genommen und mit Cosinusfunktion mit dem Offset multipliziert. Dadurch erhält man den X Wert des gewünschten punktes.
+     * Y: Gleich wie X aber die Sinusfunktion wird verwendet.
+     * 
+     * Mehr Infos unter:
+     * https://math.stackexchange.com/questions/2390443/extracting-x-and-y-values-from-radians
      * 
      * Zum Schluss wird ein neuer Punkt mit den ausgerechneten Kordinaten erstellt und auch ausgegeben.
      */
-    public Point pointPosition(int angle, int distance)
+    private Color pointCollor(int angle)
     {
         double angleRad = Math.toRadians(getRotation() + angle);
-        int x = (int) Math.round(getX() + Math.cos(angleRad) * distance);
-        int y = (int) Math.round(getY() + Math.sin(angleRad) * distance);
-        
-        return new Point(x, y);
+        int x = (int) Math.round(getX() + Math.cos(angleRad) * pointOffset);
+        int y = (int) Math.round(getY() + Math.sin(angleRad) * pointOffset);
+
+        return getWorld().getBackground().getColorAt(x, y);
     }
 }

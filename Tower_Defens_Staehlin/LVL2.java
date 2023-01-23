@@ -2,10 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
 /**
- * Write a description of class LVL2 here.
+ * Level 2 ist das zweite Level des Spiels.
+ * In dieser Klasse wird vorallem die Platzierung der Kauf Buttons, des Endes und des Spawnpoint gesetzt.
+ * Zusätzlich wird hir gesagt wieviele waves es Gibt und wie schnell die Enemys Spawnen.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class LVL2 extends GameWorld
 {

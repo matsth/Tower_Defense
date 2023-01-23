@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TempTower
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TempTower\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ TempTower\ ist\ der\ Tower\ den\ man\ erh\u00E4lt\ wen\ man\ auf\ den\ Kaufen\ Button\ dr\u00FCckt.\r\n\ Hier\ wird\ abgehandelt\ das\ der\ Tower\ und\ die\ Range\ der\ Maus\ folgt.\r\n\ Das\ der\ Tower\ gekauft\ wird\ falls\ gen\u00FCgend\ Geld\ vorhanden\ ist\ und\ der\ TempTower\ keinen\ Tower\ ber\u00FChrt\ und\ nicht\ direkt\ \u00FCber\ dem\ Pfad\ ist.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=tempprice\ temptower\ imagetw
 comment1.target=TempTower(int,\ Towers,\ java.lang.String)
 comment1.text=\r\n\ Erstelle\ einen\ Template\ Tower\ mit\ Preis,\ Tower\ der\ gekauft\ wird\ und\ der\ name\ des\ Bildes\ des\ Towers.\r\n\ \r\n\ Das\ Bild\ wird\ auf\ den\ Bild\ des\ entsprechenden\ Towers\ ge\u00E4ndert\ und\ die\ gr\u00F6sse\ wird\ angepasst.\r\n

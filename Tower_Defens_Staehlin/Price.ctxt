@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Price
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Price\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Diese\ Klasse\ wird\ verwendet\ um\ den\ Preis\ von\ Kaufbaren\ Dingen\ anzuzeigen.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=text
 comment1.target=Price(java.lang.String)
 comment1.text=\r\n\ Der\ dem\ Constructor\ mitgegebene\ Text\ wird\ angezeigt.\r\n

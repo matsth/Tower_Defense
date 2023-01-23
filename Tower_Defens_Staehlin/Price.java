@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Price here.
+ * Diese Klasse wird verwendet um den Preis von Kaufbaren Dingen anzuzeigen.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Price extends Text
 {

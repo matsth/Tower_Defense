@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TowerManu
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ TowerManu\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Beim\ Manuellen\ Tower\ sind\ die\ Dinge\ wie\ Angriffsgeschwindigkeit,\ Schaden\ und\ Reichweite\ hinterlegt.\r\n\ Zus\u00E4tzlich\ ist\ das\ Schiessen\ hier.\ (Manual\ Bullet)\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=
 comment1.target=TowerManu()
 comment1.text=\r\n\ Setzt\ die\ Stats\ des\ Towers\ und\ Passt\ die\ gr\u00F6sse\ des\ Objects\ an.\r\n

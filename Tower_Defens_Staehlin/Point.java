@@ -1,8 +1,7 @@
 /**
- * Write a description of class Point here.
+ * Der Point ist dafür da um einfacher einen Punkt auf der Map darzustellen.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Point  
 {

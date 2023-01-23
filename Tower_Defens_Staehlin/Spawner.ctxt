@@ -1,4 +1,4 @@
 #BlueJ class context
 comment0.target=Spawner
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Spawner\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Wird\ nur\ gebraucht\ um\ zu\ sehen\ wo\ ein\ Spawnpoint\ spezifisch\ ist.\r\n\ Wird\ mit\ einem\ Point\ ersetzt\ und\ gel\u00F6scht.\r\n\ \r\n\ @author\ Matteo\r\n
 numComments=1

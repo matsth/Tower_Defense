@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BuyBoom here.
+ * Dieser Button erstellt einen Boom Spell solange genügend Geld vorhanden ist.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class BuyBoom extends Button
 {
@@ -36,7 +35,7 @@ public class BuyBoom extends Button
      */
     public void cklicked()
     {
-        if(Greenfoot.mouseClicked(this) || Greenfoot.isKeyDown("3"))
+        if(cklickcheck("3"))
         {
             if(buyok())
             {

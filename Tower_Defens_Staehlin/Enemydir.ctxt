@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Enemydir
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Enemydir\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Spezieller\ Enemy\ der\ den\ Pfad\ ignoriert\ und\ direkt\ zum\ Ziel\ geht.\r\n\ Hier\ ist\ die\ Bewegung\ geregelt.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=
 comment1.target=Enemydir()
 comment1.text=\r\n\ Setzt\ die\ statistik\ dieses\ Gegners.\r\n

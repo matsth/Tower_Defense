@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Point
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Point\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Der\ Point\ ist\ daf\u00FCr\ da\ um\ einfacher\ einen\ Punkt\ auf\ der\ Map\ darzustellen.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=x\ y
 comment1.target=Point(int,\ int)
 comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Point.\r\n

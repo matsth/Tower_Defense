@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=LVL1
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ LVL1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Level\ 1\ ist\ das\ erste\ Level\ des\ Spiels.\r\n\ In\ dieser\ Klasse\ wird\ vorallem\ die\ Platzierung\ der\ Kauf\ Buttons,\ des\ Endes\ und\ des\ Spawnpoint\ gesetzt.\r\n\ Zus\u00E4tzlich\ wird\ hir\ gesagt\ wieviele\ waves\ es\ Gibt\ und\ wie\ schnell\ die\ Enemys\ Spawnen.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=
 comment1.target=LVL1()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LVL1.\r\n\ Setzt\ das\ Level\ auf.\r\n

@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TempTower here.
+ * TempTower ist der Tower den man erhält wen man auf den Kaufen Button drückt.
+ * Hier wird abgehandelt das der Tower und die Range der Maus folgt.
+ * Das der Tower gekauft wird falls genügend Geld vorhanden ist und der TempTower keinen Tower berührt und nicht direkt über dem Pfad ist.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class TempTower extends Actor
 {

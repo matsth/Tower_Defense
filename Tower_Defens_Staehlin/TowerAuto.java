@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TowerAuto here.
+ * Beim Automatischen Tower sind die Dinge wie Angriffsgeschwindigkeit, Schaden und Reichweite hinterlegt.
+ * Zusätzlich ist das Schiessen hier. (Auto Bullet)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class TowerAuto extends Towers
 {

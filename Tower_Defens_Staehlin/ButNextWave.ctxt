@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ButNextWave
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ButNextWave\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Dieser\ Button\ versucht\ die\ n\u00E4chste\ Runde\ zu\ startetn.\r\n\ Diese\ wird\ jedoch\ abgebrochen\ wenn\ noch\ Gegner\ auf\ dem\ Spielfeld\ sind\ oder\ noch\ nicht\ gespawnd\ wurden.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=
 comment1.target=ButNextWave()
 comment1.text=\r\n\ Im\ Constructor\ wird\ die\ Gr\u00F6sse\ des\ Buttons\ angepasst.\r\n

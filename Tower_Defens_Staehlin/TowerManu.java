@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TowerManu here.
+ * Beim Manuellen Tower sind die Dinge wie Angriffsgeschwindigkeit, Schaden und Reichweite hinterlegt.
+ * Zusätzlich ist das Schiessen hier. (Manual Bullet)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class TowerManu extends Towers
 {

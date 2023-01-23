@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Spawner here.
+ * Wird nur gebraucht um zu sehen wo ein Spawnpoint spezifisch ist.
+ * Wird mit einem Point ersetzt und gelöscht.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Spawner extends Actor
 {

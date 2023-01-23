@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Text
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Text\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Eine\ Klasse\ die\ Daf\u00FCr\ da\ ist\ Text\ anzuzeigen\ und\ zu\ \u00E4ndern.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=text
 comment1.target=void\ setText(java.lang.String)
 comment1.text=\r\n\ Dise\ Methode\ dient\ dazu\ Text\ anzupssen.\r\n

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Button
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Button\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Hier\ werden\ die\ Standard\ funktionen\ des\ Buttons\ verwaltet.\r\n\ \r\n\ Vom\ Preis\ bis\ zum\ testen\ ob\ er\ gekauft\ werden\ kann\ ist\ alles\ hier\ verwaltet.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=
 comment1.target=boolean\ buyok()
 comment1.text=\r\n\ Hier\ wird\ getestet\ ob\ man\ gen\u00FCgen\ Geld\ hat\ um\ das\ entsprechende\ Item\ zu\ Kaufen.\r\n\ Falls\ ja\ werden\ die\ Templates\ entfernt\ und\ ja\ zur\u00FCckgegeben.\r\n
@@ -16,4 +16,7 @@ comment4.text=\r\n\ Es\ wird\ getestet\ ob\ es\ Momentan\ Templates\ oder\ einen
 comment5.params=towertemp\ towerdescrip
 comment5.target=void\ addTower(Towers,\ java.lang.String)
 comment5.text=\r\n\ Es\ wird\ ein\ neuer\ TowerTemplate\ erstellt.\r\n
-numComments=6
+comment6.params=shortcut
+comment6.target=boolean\ cklickcheck(java.lang.String)
+comment6.text=\r\n\ Checkt\ ob\ der\ Button\ oder\ der\ Shortcut\ gedr\u00FCckt\ wurde.\r\n
+numComments=7

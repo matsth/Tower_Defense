@@ -3,10 +3,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Write a description of class Towers here.
+ * Das Template eines Tower der die Angriffsgeschwindikeit, Gegner finden und anzeigen der Range hinterlegt ist.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Towers extends Actor
 {

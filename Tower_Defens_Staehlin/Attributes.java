@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Attributes here.
+ * Diese Klasse wird verwendet um die Statistik in einem Spiel anzuzeigen.
+ * (Leben, Geld, Runden, Zeit)
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Attributes extends Text
 {

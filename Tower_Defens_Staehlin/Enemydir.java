@@ -2,10 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
 /**
- * Write a description of class Enemydir here.
+ * Spezieller Enemy der den Pfad ignoriert und direkt zum Ziel geht.
+ * Hier ist die Bewegung geregelt.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Enemydir extends Enemys
 {

@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Spells here.
+ * Hier werden die Dinge vom TempTower abgehandelt.
+ * Dass ganze Kaufen von einem Spell.
+ * Anzeigen der Range etc.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class Spells extends Text
 {

@@ -2,10 +2,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
 /**
- * Write a description of class GameWorld here.
+ * Die Gameworld ist die Basis des Spiels.
+ * Hier werden die Leben, Geld, Rundenanzeige verwaltet.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Zusätzlich wird das Spawnen der gegner hier abgehalten.
+ * 
+ * @author Matteo
  */
 public class GameWorld extends World
 {
@@ -98,7 +100,7 @@ public class GameWorld extends World
      */
     private void gameOver()
     {
-        EndScreen newWorld = new EndScreen(false, Level);
+        EndScreen newWorld = new EndScreen(false, Level, timer, currentWave);
         Greenfoot.setWorld(newWorld);
     }
     /**
@@ -196,7 +198,7 @@ public class GameWorld extends World
      */
     private void gameOn()
     {
-        EndScreen newWorld = new EndScreen(true, Level);
+        EndScreen newWorld = new EndScreen(true, Level, timer, currentWave);
         Greenfoot.setWorld(newWorld);
     }
     /**

@@ -2,10 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.*;
 
 /**
- * Write a description of class LVL1 here.
+ * Level 1 ist das erste Level des Spiels.
+ * In dieser Klasse wird vorallem die Platzierung der Kauf Buttons, des Endes und des Spawnpoint gesetzt.
+ * Zusätzlich wird hir gesagt wieviele waves es Gibt und wie schnell die Enemys Spawnen.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Matteo
  */
 public class LVL1 extends GameWorld
 {
@@ -15,7 +16,6 @@ public class LVL1 extends GameWorld
      */
     public LVL1()
     {
-        //super(1200, 780, 1);
         prepare();
     }
     
