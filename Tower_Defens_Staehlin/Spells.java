@@ -42,6 +42,8 @@ public class Spells extends Text
     }
     /**
      * Der Price des Spells wird gesetzt.
+     * 
+     * @param value setzt der Preis des Spells.
      */
     public void setprice(int value)
     {
@@ -49,6 +51,8 @@ public class Spells extends Text
     }
     /**
      * Der Price des Spells wird herausgegeben.
+     * 
+     * @return holt den Preis des Spells.
      */
     public int getprice()
     {
@@ -56,6 +60,8 @@ public class Spells extends Text
     }
     /**
      * Das Range Object des Spells wird zurückgegeben.
+     * 
+     * @return Gibt die aktuelle Range zurück die verwendet wird.
      */
     public Range returnRangeobj()
     {
@@ -63,6 +69,8 @@ public class Spells extends Text
     }
     /**
      * Die Reichweite des Spells wird gesetzt.
+     * 
+     * @param radius setzt die Reichweite des Spells.
      */
     public void setRange(int radius)
     {
@@ -70,6 +78,8 @@ public class Spells extends Text
     }
     /**
      * Die Reichweite des Spells wird zurückgegeben.
+     * 
+     * @return gibt die Reichweite des Spells zurück.
      */
     public int returnRange()
     {

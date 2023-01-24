@@ -18,6 +18,8 @@ public class Towers extends Actor
     
     /**
      * Die Stats des Towers werden Gesetzt.
+     * 
+     * @param stats setzt die 1. Reichweite 2. den Schaden 3. und die Schiessgeschwindigkeit des Towers.
      */
     public void setup(int[] stats)
     {
@@ -27,6 +29,8 @@ public class Towers extends Actor
     }
     /**
      * Gibt die Range des Towers aus.
+     * 
+     * @return Gibt die Schiessgeschwindigkeit zurück.
      */
     public int getRange()
     {
@@ -34,6 +38,8 @@ public class Towers extends Actor
     }
     /**
      * Gibt den Schaden des Towers aus.
+     * 
+     * @return Gibt den Schaden zurück.
      */
     public int getDmg()
     {
@@ -41,6 +47,8 @@ public class Towers extends Actor
     }
     /**
      * Gibt den Reloadspeed des Towers aus.
+     * 
+     * @return Gibt die Schussgeschwindigkeit zurück.
      */
     public int getShootspeed()
     {
@@ -49,6 +57,8 @@ public class Towers extends Actor
     
     /**
      * Findet alle Gegner inerhalb der Reichweite des Towers zurück und holt den ersten raus.
+     * 
+     * @return Gibt einen Gegner inerhalb der Reichweite zurück.
      */
     public Enemys findEnemy()
     {

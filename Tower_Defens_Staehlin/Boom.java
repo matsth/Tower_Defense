@@ -13,6 +13,9 @@ public class Boom extends Spells
     /**
      * Setzt die Reichweite und die Kosten dieses Spells.
      * Der Text BOOM! wird gesetzt.
+     * 
+     * @param tempprice setzt den Preis dieses Spells auf den Eingegebenen.
+     * @param tempsize setzt die Reichweite des Spells auf die eingegebene.
      */
     public Boom(int tempprice, int tempsize)
     {

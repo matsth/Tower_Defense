@@ -10,6 +10,9 @@ public class Point
 
     /**
      * Konstruktor für Objekte der Klasse Point.
+     * 
+     * @param x die x-Kordinaten dieses Punktes werden gesetzt.
+     * @param y die y-Kordinaten dieses Punktes werden gesetzt.
      */
     public Point(int x, int y)
     {
@@ -19,6 +22,8 @@ public class Point
 
     /**
      * Liefert die x-Koordinate.
+     * 
+     * @return Gibt die x Kordinaten zurück.
      */
     public int getX()
     {
@@ -27,7 +32,8 @@ public class Point
 
     /**
      * Liefert die y-Koordinate.
-
+     * 
+     * @return Gibt die y Kordinaten zurück.
      */
     public int getY()
     {

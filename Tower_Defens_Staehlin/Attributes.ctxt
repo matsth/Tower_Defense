@@ -3,5 +3,5 @@ comment0.target=Attributes
 comment0.text=\r\n\ Diese\ Klasse\ wird\ verwendet\ um\ die\ Statistik\ in\ einem\ Spiel\ anzuzeigen.\r\n\ (Leben,\ Geld,\ Runden,\ Zeit)\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=text
 comment1.target=Attributes(java.lang.String)
-comment1.text=\r\n\ Der\ im\ Constructor\ mitgegene\ Text\ wird\ angezeigt.\r\n
+comment1.text=\r\n\ Der\ im\ Constructor\ mitgegene\ Text\ wird\ angezeigt.\r\n\ \r\n\ @param\ text\ ist\ der\ Text\ auf\ den\ das\ Objekt\ ge\u00E4ndert\ werden\ soll.\r\n
 numComments=2

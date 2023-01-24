@@ -10,6 +10,8 @@ public class Attributes extends Text
 {
     /**
      * Der im Constructor mitgegene Text wird angezeigt.
+     * 
+     * @param text ist der Text auf den das Objekt geändert werden soll.
      */
     public Attributes(String text)
     {

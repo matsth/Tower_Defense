@@ -31,6 +31,8 @@ public class StartScreen extends World
     }
     /**
      * Erstelt das Level und ändert auf das Level.
+     * 
+     * @param Levelnumber ist die Nummer des Levels das aufgerufen werden soll.
      */
     private void setWorld(int Levelnumber)
     {

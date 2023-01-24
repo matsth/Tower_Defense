@@ -29,6 +29,10 @@ public class Bullet extends Actor
     /**
      * Constructor für eine Bullet die in eine Bestimmte richtung fliegt.
      * Die Richtung wird mit der Rotation bestimmt.
+     * 
+     * @param dmgtemp ist der Schaden der Bullet die einem Gegner macht.
+     * @param rangetemp ist wie weit die Bullet fliegt in pixel.
+     * @param rotation ist die Richtung in die die Bullet fliegt in Grad.
      */
     public Bullet(int dmgtemp, int rangetemp, int rotation)
     {
@@ -42,6 +46,9 @@ public class Bullet extends Actor
     
     /**
      * Constructor für Bullet die dem target nachfliegt das dem Constructor gegeben wurde.
+     * 
+     * @param dmgtemp ist der Schaden der Bullet die einem Gegner macht.
+     * @param targettemp ist das Ziel auf das die Bullet fliegt.
      */
     public Bullet(int dmgtemp, Enemys targettemp)
     {
@@ -154,6 +161,8 @@ public class Bullet extends Actor
     
     /**
      * Bullet sucht sich ein neues Target aus falls ein Gegner in der nähe ist.
+     * 
+     * @return gibt zurück ob ein Gegner in der nähe gefunden wurde.
      */
     private boolean retarget()
     {

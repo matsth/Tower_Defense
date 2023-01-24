@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=Bullet
-comment0.text=\r\n\ Die\ Bullet\ wird\ dazu\ verwendet\ den\ Enemys\ Leben\ abzuziehen.\r\n\ Sie\ hat\ ein\ Automatischen\ und\ einen\ Manuellen\ modi.\r\n\ \r\n\ Der\ Manuelle\ Modi\ fliegt\ einfach\ gerade\ aus.\r\n\ \r\n\ Der\ Automatische\ Modi\ fliegt\ einem\ spezifischen\ Gegner\ nach.\r\n\ Falls\ dieser\ nicht\ mehr\ existiert\ sucht\ sie\ sich\ einen\ anderen\ Gegn\u00E4hr\ in\ der\ n\u00E4he.\r\n\ Falls\ es\ keinen\ Hat\ l\u00F6scht\ sie\ sich\ selber.\r\n\ \r\n\ Bullets\ treffen\ immer\ den\ ersten\ Gegner\ den\ sie\ ber\u00FChren.\r\n\ \r\n\ @author\ M\r\n
+comment0.text=\r\n\ Die\ Bullet\ wird\ dazu\ verwendet\ den\ Enemys\ Leben\ abzuziehen.\r\n\ Sie\ hat\ ein\ Automatischen\ und\ einen\ Manuellen\ modi.\r\n\ \r\n\ Der\ Manuelle\ Modi\ fliegt\ einfach\ gerade\ aus.\r\n\ \r\n\ Der\ Automatische\ Modi\ fliegt\ einem\ spezifischen\ Gegner\ nach.\r\n\ Falls\ dieser\ nicht\ mehr\ existiert\ sucht\ sie\ sich\ einen\ anderen\ Gegn\u00E4hr\ in\ der\ n\u00E4he.\r\n\ Falls\ es\ keinen\ Hat\ l\u00F6scht\ sie\ sich\ selber.\r\n\ \r\n\ Bullets\ treffen\ immer\ den\ ersten\ Gegner\ den\ sie\ ber\u00FChren.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=dmgtemp\ rangetemp\ rotation
 comment1.target=Bullet(int,\ int,\ int)
-comment1.text=\r\n\ Constructor\ f\u00FCr\ eine\ Bullet\ die\ in\ eine\ Bestimmte\ richtung\ fliegt.\r\n\ Die\ Richtung\ wird\ mit\ der\ Rotation\ bestimmt.\r\n
+comment1.text=\r\n\ Constructor\ f\u00FCr\ eine\ Bullet\ die\ in\ eine\ Bestimmte\ richtung\ fliegt.\r\n\ Die\ Richtung\ wird\ mit\ der\ Rotation\ bestimmt.\r\n\ \r\n\ @param\ dmgtemp\ ist\ der\ Schaden\ der\ Bullet\ die\ einem\ Gegner\ macht.\r\n\ @param\ rangetemp\ ist\ wie\ weit\ die\ Bullet\ fliegt\ in\ pixel.\r\n\ @param\ rotation\ ist\ die\ Richtung\ in\ die\ die\ Bullet\ fliegt\ in\ Grad.\r\n
 comment2.params=dmgtemp\ targettemp
 comment2.target=Bullet(int,\ Enemys)
-comment2.text=\r\n\ Constructor\ f\u00FCr\ Bullet\ die\ dem\ target\ nachfliegt\ das\ dem\ Constructor\ gegeben\ wurde.\r\n
+comment2.text=\r\n\ Constructor\ f\u00FCr\ Bullet\ die\ dem\ target\ nachfliegt\ das\ dem\ Constructor\ gegeben\ wurde.\r\n\ \r\n\ @param\ dmgtemp\ ist\ der\ Schaden\ der\ Bullet\ die\ einem\ Gegner\ macht.\r\n\ @param\ targettemp\ ist\ das\ Ziel\ auf\ das\ die\ Bullet\ fliegt.\r\n
 comment3.params=
 comment3.target=void\ act()
 comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Bullet\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n\ \r\n\ Fals\ die\ Bullet\ Automatisch\ ist\ wird\ dementsprechend\ geschaut\ ob\ es\ diesen\ Enemy\ noch\ gibt\ sonst\ wird\ Bullet\ entfernt.\r\n\ Falls\ das\ Target\ noch\ existiert\ wird\ die\ Automatische\ Bewegung\ durchgef\u00FChrt\ und\ getestet\ ob\ ein\ Enemy\ ber\u00FCrt\ wird.\r\n\ \r\n\ Falls\ die\ Bullet\ Manuel\ ist\ fliegt\ sie\ weiter.\r\n\ Danach\ wird\ getestet\ ob\ sie\ am\ ende\ der\ Welt\ ist\ oder\ ob\ sie\ bereits\ \u00FCber\ ihre\ Maximalreichweite\ geflogen\ ist.\r\n\ Falls\ ja\ wird\ sie\ entfernt\ falls\ nicht\ wird\ getestet\ ob\ sie\ ein\ Gegner\ ber\u00FChrt.\r\n
@@ -21,5 +21,5 @@ comment6.target=void\ moveauto()
 comment6.text=\r\n\ Dieser\ Mit\ der\ Automatischen\ Bewegung\ wird\ ausgerechnet\ um\ wie\ viel\ sich\ die\ Bullet\ auf\ jeder\ achse\ bewegen\ muss.\r\n\ Danach\ wird\ getestet\ ob\ sie\ sich\ weiter\ bewegt\ als\ die\ Geschwindigkeit\ der\ Bullet\ falls\ ja\ wird\ diese\ auf\ die\ Geschwindikeit\ heruntergesetzt.\r\n\ \r\n\ Danach\ setzt\ sich\ die\ Bullet\ an\ den\ neuen\ Ort.\r\n
 comment7.params=
 comment7.target=boolean\ retarget()
-comment7.text=\r\n\ Bullet\ sucht\ sich\ ein\ neues\ Target\ aus\ falls\ ein\ Gegner\ in\ der\ n\u00E4he\ ist.\r\n
+comment7.text=\r\n\ Bullet\ sucht\ sich\ ein\ neues\ Target\ aus\ falls\ ein\ Gegner\ in\ der\ n\u00E4he\ ist.\r\n\ \r\n\ @return\ gibt\ zur\u00FCck\ ob\ ein\ Gegner\ in\ der\ n\u00E4he\ gefunden\ wurde.\r\n
 numComments=8

@@ -57,7 +57,7 @@ public class Enemynor extends Enemys
     }
     
     /**
-     * Zuerst wird der Winkelbogen als Radians ausgerechnet.
+     * Zuerst wird der Radians ausgerechnet.
      * X: Der Radians wird genommen und mit Cosinusfunktion mit dem Offset multipliziert. Dadurch erhält man den X Wert des gewünschten punktes.
      * Y: Gleich wie X aber die Sinusfunktion wird verwendet.
      * 
@@ -65,6 +65,9 @@ public class Enemynor extends Enemys
      * https://math.stackexchange.com/questions/2390443/extracting-x-and-y-values-from-radians
      * 
      * Zum Schluss wird ein neuer Punkt mit den ausgerechneten Kordinaten erstellt und auch ausgegeben.
+     * 
+     * @param angle ist der Winkel auf dem der cosinus oder sinus angewendet wird.
+     * @return ist die Farbe an dem ausgerechneten Punkt.
      */
     private Color pointCollor(int angle)
     {

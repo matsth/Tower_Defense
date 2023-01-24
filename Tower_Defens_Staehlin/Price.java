@@ -9,6 +9,8 @@ public class Price extends Text
 {
     /**
      * Der dem Constructor mitgegebene Text wird angezeigt.
+     * 
+     * @param text ist der Text auf den das Objekt geändert werden soll.
      */
     public Price(String text)
     {

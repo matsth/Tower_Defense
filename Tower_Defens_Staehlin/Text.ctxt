@@ -3,5 +3,5 @@ comment0.target=Text
 comment0.text=\r\n\ Eine\ Klasse\ die\ Daf\u00FCr\ da\ ist\ Text\ anzuzeigen\ und\ zu\ \u00E4ndern.\r\n\ \r\n\ @author\ Matteo\r\n
 comment1.params=text
 comment1.target=void\ setText(java.lang.String)
-comment1.text=\r\n\ Dise\ Methode\ dient\ dazu\ Text\ anzupssen.\r\n
+comment1.text=\r\n\ Dise\ Methode\ dient\ dazu\ Text\ anzupssen.\r\n\ \r\n\ @param\ text\ ist\ der\ Text\ auf\ den\ das\ Objekt\ ge\u00E4ndert\ werden\ soll.\r\n
 numComments=2

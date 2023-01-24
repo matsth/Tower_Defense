@@ -15,6 +15,11 @@ public class EndScreen extends World
     /**
      * Erstellt das das EndScreen object.
      * Setzt ob gewonnen wude und welches Level gespielt wurde.
+     * 
+     * @param victory zeigt an ob das Level gewonnen wurde.
+     * @param templevel welchem Level gespielt wurde
+     * @param temptime wie lange gespielt wurde.
+     * @param tempwave auf welcher Wave das Spiel geendet hat.
      */
     public EndScreen(boolean victory, int templevel, int temptime, int tempwave)
     {    

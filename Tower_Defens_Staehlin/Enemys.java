@@ -15,6 +15,8 @@ public class Enemys extends Actor
     
     /**
      * Setzt die Stats von einem Enemy.
+     * 
+     * @param stats sind die 1. Geschwindikeit 2. Leben 3. Schaden der er am Spieler macht 4. Geld das es für das besigen gibt.
      */
     public void setStats(int[] stats)
     {
@@ -27,6 +29,8 @@ public class Enemys extends Actor
     
     /**
      * Gibt zurück wie schnell ein Gegner ist.
+     * 
+     * @return Holt sich die Geschwindikeit
      */
     public int getmove()
     {
@@ -50,6 +54,8 @@ public class Enemys extends Actor
     /**
      * Wird verwendet um das Leben eines Enemy abzuziehen.
      * Falls das Leben 0 erreicht wird der Enemy zerstört und gibt sein value als Geld mit der changeMoney() Methode der Welt.
+     * 
+     * @param hit ist der Schaden denn den Leben abgezogen wird.
      */
     public void removeLife(int hit)
     {

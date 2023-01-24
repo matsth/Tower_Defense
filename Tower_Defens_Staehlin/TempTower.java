@@ -22,6 +22,10 @@ public class TempTower extends Actor
      * Erstelle einen Template Tower mit Preis, Tower der gekauft wird und der name des Bildes des Towers.
      * 
      * Das Bild wird auf den Bild des entsprechenden Towers geändert und die grösse wird angepasst.
+     * 
+     * @param tempprice ist der Preis der der Tower kostet.
+     * @param temptower ist der Tower der gekauft werden soll.
+     * @param imagetw ist das Bild des Towers der gekauft werden soll.
      */
     public TempTower(int tempprice, Towers temptower, String imagetw)
     {
@@ -113,6 +117,8 @@ public class TempTower extends Actor
     }
     /**
      * Checht ob der Hintergrund Schwarz ist.
+     * 
+     * @return Gibt zurück ob der Hintergrund Schwarz ist.
      */
     private boolean testBackground()
     {

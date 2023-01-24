@@ -11,6 +11,9 @@ public class Range extends Actor
     
     /**
      * Erzeuge einen bestimte Range mit mitgegeben Radius mit einer Bestimmten Farbe.
+     * 
+     * @param size ist die Grösse des Ranges
+     * @param ok ist ob Range Grün true oder Rot false sein sollte.
      */
     public Range(int size, boolean ok)
     {
@@ -21,6 +24,8 @@ public class Range extends Actor
     
     /**
      * Ein grüne Range wird mit einem variablen Radius wird erstellt.
+     * 
+     * @param size ist die Grösse des Ranges
      */
     public Range(int size)
     {
@@ -43,6 +48,8 @@ public class Range extends Actor
      * Die Farbe des Radius kann auf rot oder grün geändert werden.
      * true ist grün
      * fals ist rot
+     * 
+     * @param ok ist ob Range Grün true oder Rot false sein sollte.
      */
     public void changeColor(boolean ok)
     {

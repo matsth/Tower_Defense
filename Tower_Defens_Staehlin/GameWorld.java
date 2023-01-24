@@ -75,6 +75,8 @@ public class GameWorld extends World
     
     /**
      * Ändert die Leben und führt die gameOver() methode aus falls 0 Leben ereicht werden.
+     * 
+     * @param value der Wert der von den Leben abgezogen wird.
      */
     public void changeLifes(int value)
     {
@@ -105,6 +107,8 @@ public class GameWorld extends World
     }
     /**
      * Ändert das Geld.
+     * 
+     * @param value ist der Wert welcher der zu cash hinzugerechnet wird.
      */
     public void changeMoney(int value)
     {
@@ -121,6 +125,8 @@ public class GameWorld extends World
     }
     /**
      * Gibt das aktuelle Geld aus.
+     * 
+     * @return gibt aus wieviel Geld der Spieler hat.
      */
     public int money()
     {
@@ -131,6 +137,11 @@ public class GameWorld extends World
      * Setup für das Spiel.
      * Je nach Level können andere Gegner pro Runde geschickt und in verschiedene abstönden.
      * Zusätzlich wird auch noch der Punkt an dem die Gegner erzeugt werden gesezt und das aktuelle Level.
+     * 
+     * @param enemysperwave sind die anzahl der Gegner die in jeder Wave gespawnd werden.
+     * @param cooldownperwave gibt an wie schnell nacheinander in einer Wave Gegner gespawnd werden.
+     * @param tempspawn gibt an wo die Gegner gespawnd werden.
+     * @param LVL ist das Level auf dem gespielt wird.
      */
     public void setupLevel(int[] enemysperwave, int[] cooldownperwave, Point tempspawn, int LVL)
     {

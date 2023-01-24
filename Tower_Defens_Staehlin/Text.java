@@ -9,6 +9,8 @@ public class Text extends Actor
 {
     /**
      * Dise Methode dient dazu Text anzupssen.
+     * 
+     * @param text ist der Text auf den das Objekt geändert werden soll.
      */
     public void setText(String text)
     {
